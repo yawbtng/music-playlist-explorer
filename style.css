@@ -58,7 +58,6 @@ header h1{
 .p-card:hover {
     background-color: lightskyblue;
     cursor:grab;
-    z-index: 2;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -117,8 +116,8 @@ footer {
    cursor: pointer;
 }
 
-.modal img {
-    height: 50px;
+.playlistImage {
+    width: 30%;
 }
 
 .modal-playlist {
@@ -129,24 +128,44 @@ footer {
     margin-bottom: 25px;
 }
 
-#playlistImage {
-    height: 150px;
+.playlistImage {
+    width: 15%;
     border: 1px solid black;
+}
+
+
+.playlistName {
+    font-size: 60px;
+    margin: 25px 0px 10px 0px;
+}
+
+.creatorName {
+    font-size: 40px;
 }
 
 .song {
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;
-    gap: 15px;
+    justify-content:space-between;
+    align-items:center;
     margin: 20px 0px;
     border: 2px solid black;
 }
+.song-content img {
+    height: 110px;
+    margin-right: 10px;
+}
 
-.song img {
-    height: 75px;
+.song-content {
+    display: flex;
 }
 
 .song-text h4, p {
     margin: 2px;
+    font-size: x-large;
+}
+
+.song h6 {
+    font-size: larger;
+    margin-right: 15px;
 }
