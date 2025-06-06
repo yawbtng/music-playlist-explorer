@@ -63,24 +63,24 @@ const createPlaylist = (list) => {
                modal.innerHTML = "";
                modal.style.display = "none";
             })
+            
+            const shuffleBtn = document.querySelector(".shuffle")
 
+            shuffleBtn.addEventListener("click", () => {
+               const songContainer = document.querySelector(".song-container")
+               const elements = Array.from(songContainer.children)
 
+               for (let i = elements.length - 1; i > 0; i--) {
+                  const j = Math.floor(Math.random() * (i + 1));
+                  [elements[i], elements[j]] = [elements[j], elements[i]];
+               }
 
+               songContainer.innerHTML = '';
+               elements.forEach(element => songContainer.appendChild(element));
+            })
             
          }
-         
-         
-         
-         
-         
-         
-
       })
-
-      
-
-
-
       return playlistElement;
 }
 
@@ -115,9 +115,12 @@ const createPlaylistModal = (modal) => {
             <div>
                <h1 class="playlistName">${modal.playlist_name}</h1>
                <p class="creatorName">${modal.playlist_author}</p>
+               <button class="shuffle">Shuffle</button>
             </div>
          </div>
-         ${songList}
+         <div class="song-container">
+            ${songList}
+         </div>
       </div>
    `
 

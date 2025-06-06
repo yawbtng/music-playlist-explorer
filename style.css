@@ -189,3 +189,9 @@ footer {
     font-size: larger;
     margin-right: 15px;
 }
+
+.shuffle {
+    margin-top: 5px;
+    font-size: 20px;
+    padding: 8px;
+}
