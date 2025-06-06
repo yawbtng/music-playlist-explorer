@@ -18,26 +18,67 @@ const createPlaylist = (list) => {
       const playlistElement = document.createElement("div");
       playlistElement.className = "p-card"
 
+      let random = Math.floor(Math.random() * 100) + 1;
+
+
       playlistElement.innerHTML = `
                   <img src="${list.playlist_art}">
                   <h4 class="playlist-title">${list.playlist_name}</h4>
                   <h6 class="playlist-author">${list.playlist_author}</h6>
-                  <button class="playlist-like">Like ♡</button>
+                  <div class="like-feature">
+                     <button class="playlist-like" id="playlist-like-${list.playlistID}">♡<span class="like-count" id="like-count-${list.playlistID}">${random}</span></button>
+                  </div>
                `
 
-      playlistElement.addEventListener("click", () => {
-         createPlaylistModal(list);
+      playlistElement.addEventListener("click", (event) => {
+         
+         console.log(event.target.classList)
+         
+         if (event.target.classList.contains("playlist-like")) {
+            const like = document.getElementById(`playlist-like-${list.playlistID}`)
+            console.log(like);
 
-         const modalExit = document.querySelector(".close");
-      
-         modalExit.addEventListener("click", () => {
-            const modal = document.querySelector(".modal");
-            modal.innerHTML = "";
-            modal.style.display = "none";
-         })
+            let isLiked = false;
+            if (like.style.color == "red") {
+               isLiked = true;
+            }
+            
+            likeCount = like.querySelector(`.like-count`)
+            
+            if (!isLiked) {
+               likeCount.innerHTML = Number(likeCount.innerHTML) + 1;
+               like.style.color = "red";
+            } else {
+               likeCount.innerHTML = Number(likeCount.innerHTML) - 1;
+               like.style.color = "black";
+            }
+            
+         } else {
+            createPlaylistModal(list);
+
+            const modalExit = document.querySelector(".close");
+         
+            modalExit.addEventListener("click", () => {
+               const modal = document.querySelector(".modal");
+               modal.innerHTML = "";
+               modal.style.display = "none";
+            })
+
+
+
+            
+         }
+         
+         
+         
+         
+         
+         
+
       })
 
       
+
 
 
       return playlistElement;
@@ -82,3 +123,4 @@ const createPlaylistModal = (modal) => {
 
    modalElement.style.display = "block";
 }
+
