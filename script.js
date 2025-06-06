@@ -10,8 +10,10 @@ const loadCards = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
    const currentPath = window.location.pathname;
-   if (currentPath === "/index.html") {
+   console.log(currentPath)
+   if (currentPath === "/index.html" || currentPath === "/") {
       loadCards();
+      sorting();
    } else if (currentPath === "/featured.html") {
          let featuredPlaylist = loadRandomFeature();
          createFeaturedPlaylist(featuredPlaylist);
@@ -24,9 +26,9 @@ const createPlaylist = (list) => {
       console.log(list);
       const playlistElement = document.createElement("div");
       playlistElement.className = "p-card"
+      playlistElement.id = `${list.date_added}`
 
       let random = Math.floor(Math.random() * 100) + 1;
-
       playlistElement.innerHTML = `
                   <img src="${list.playlist_art}">
                   <h4 class="playlist-title">${list.playlist_name}</h4>
@@ -183,4 +185,57 @@ const loadRandomFeature = () => {
    let featuredPlaylist = playlists[randomFeature]
    console.log(featuredPlaylist)
    return featuredPlaylist;
+}
+
+
+
+// Sort playlists
+const sorting = () => {
+   const sortSelect = document.getElementById("sort");
+   console.log(sortSelect);
+   const elementsContainer = document.getElementById("playlist-cards");
+   console.log(elementsContainer);
+
+   function sortElements() {
+      const selectedOption = sortSelect.value;
+      console.log(selectedOption)
+      const elements = Array.from(elementsContainer.children);
+
+      switch(selectedOption) {
+         case "A-Z":
+            elements.sort((a,b) => {
+               let c = a.querySelector(".playlist-title");
+               let d = b.querySelector(".playlist-title");
+               if (!c || !d) {
+                  return 0;
+               }
+               return c.textContent.localeCompare(d.textContent);
+            });
+            break;
+         
+         case "like-count":
+            elements.sort((a,b) => {
+               let c = a.querySelector(".like-count");
+               let d = b.querySelector(".like-count");
+               return parseInt(d.textContent) - parseInt(c.textContent);
+            });
+            break;
+         
+         case "recent":
+            elements.sort((a,b) => {
+               let c = new Date(a.id);
+               let d = new Date(b.id);
+               return d-c;
+            })
+            break;
+         default:
+            console.log("No sorting implemented");
+      }
+      elementsContainer.innerHTML = "";
+
+      elements.forEach(element => elementsContainer.appendChild(element));
+
+   }
+
+   sortSelect.addEventListener("change", sortElements);
 }

@@ -21,17 +21,31 @@
 
     <main> 
         <!-- Your main content here -->
+        <menu id="search-and-sort">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search playlists..."/>
+                <button type="submit"> Go! </button>
+            </form>
 
-         <!-- Individual Playlist cards here -->
+            <div id="sort-feature">
+                <label for="sort-playlists">Sort playlists by</label>
+                <select name="sort-playlists" id="sort">
+                    <option value="default">None</option>
+                    <option value="A-Z">Alphabetical (A-Z)</option>
+                    <option value="like-count">Most Liked</option>
+                    <option value="recent">Recently Added</option>
+                </select>
+            </div>
+        </menu>
+
+        <!-- Individual Playlist cards here -->
         <section id="playlist-cards">
 
         </section>
 
-         <!-- Playlist Modals here -->
+        <!-- Playlist Modals here -->
         <section id="playlistModal">
             <div class="modal">
-
-
 
             </div>
         </section>

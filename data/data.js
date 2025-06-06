@@ -10,6 +10,7 @@ playlists = [
     "playlist_name": "Summer Vibes",
     "playlist_author": "John Doe",
     "playlist_art": "assets/img/playlist.png",
+    "date_added": new Date(2023, 4, 12),
     "songs": [
       {
         "songID": 1,
@@ -58,6 +59,7 @@ playlists = [
     "playlist_name": "Workout Mix",
     "playlist_author": "Jane Smith",
     "playlist_art": "assets/img/playlist.png",
+    "date_added": new Date(2021, 6, 17),
     "songs": [
       {
         "songID": 4,
@@ -106,6 +108,7 @@ playlists = [
     "playlist_name": "Relaxing Music",
     "playlist_author": "Bob Johnson",
     "playlist_art": "assets/img/playlist.png",
+    "date_added": new Date(2025, 3, 1),
     "songs": [
       {
         "songID": 7,
@@ -154,6 +157,7 @@ playlists = [
     "playlist_name": "Jazz Classics",
     "playlist_author": "Emily Chen",
     "playlist_art": "assets/img/playlist.png",
+    "date_added": new Date(2023, 8, 3),
     "songs": [
       {
         "songID": 10,
@@ -202,6 +206,7 @@ playlists = [
     "playlist_name": "Rock Anthems",
     "playlist_author": "David Lee",
     "playlist_art": "assets/img/playlist.png",
+    "date_added": new Date(2025, 5, 7),
     "songs": [
       {
         "songID": 13,
@@ -250,6 +255,7 @@ playlists = [
     "playlist_name": "Hip-Hop Favorites",
     "playlist_author": "Sarah Taylor",
     "playlist_art": "assets/img/playlist.png",
+    "date_added": new Date(2020, 10, 12),
     "songs": [
       {
         "songID": 16,
@@ -298,6 +304,7 @@ playlists = [
     "playlist_name": "Pop Hits",
     "playlist_author": "Emily Chen",
     "playlist_art": "assets/img/playlist.png",
+    "date_added": new Date(2024, 7, 1),
     "songs": [
       {
         "songID": 19,
@@ -346,6 +353,7 @@ playlists = [
     "playlist_name": "Electronic Dance Music",
     "playlist_author": "David Lee",
     "playlist_art": "assets/img/playlist.png",
+    "date_added": new Date(2019, 11, 15),
     "songs": [
       {
         "songID": 22,
