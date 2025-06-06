@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
    if (currentPath === "/index.html" || currentPath === "/") {
       loadCards();
       sorting();
+      search();
+      
    } else if (currentPath === "/featured.html") {
          let featuredPlaylist = loadRandomFeature();
          createFeaturedPlaylist(featuredPlaylist);
@@ -192,13 +194,10 @@ const loadRandomFeature = () => {
 // Sort playlists
 const sorting = () => {
    const sortSelect = document.getElementById("sort");
-   console.log(sortSelect);
    const elementsContainer = document.getElementById("playlist-cards");
-   console.log(elementsContainer);
 
    function sortElements() {
       const selectedOption = sortSelect.value;
-      console.log(selectedOption)
       const elements = Array.from(elementsContainer.children);
 
       switch(selectedOption) {
@@ -231,6 +230,7 @@ const sorting = () => {
          default:
             console.log("No sorting implemented");
       }
+
       elementsContainer.innerHTML = "";
 
       elements.forEach(element => elementsContainer.appendChild(element));
@@ -239,3 +239,40 @@ const sorting = () => {
 
    sortSelect.addEventListener("change", sortElements);
 }
+
+// Search Playlists by Title or Date
+const search = () => {
+   const submitSearch = document.getElementById("search-form");
+   const elementsContainer = document.getElementById("playlist-cards");
+
+   function displaySearchElements() {
+      const searchInput = document.getElementById("search-input");
+      let searchValue = searchInput.value.toLowerCase();
+      const elements = Array.from(elementsContainer.children);
+      
+      elements.forEach((element) => {
+         const playlistName = element.querySelector(".playlist-title").textContent.toLowerCase();
+         console.log(playlistName);
+         const playlistAuthor = element.querySelector(".playlist-author").textContent.toLowerCase();
+         console.log(playlistAuthor);
+
+         if (playlistName.includes(searchValue) || playlistAuthor.includes(searchValue)) {
+            element.style.display = "block";
+            element.hidden = false;
+         } else {
+            element.style.display = "none";
+            element.hidden = true;
+         }
+      });
+
+      elementsContainer.innerHTML = "";
+      elements.forEach(element => elementsContainer.appendChild(element));
+   }
+
+   submitSearch.addEventListener("submit", (event) => {
+      console.log(event)
+      event.preventDefault();
+      displaySearchElements();
+   });
+}
+

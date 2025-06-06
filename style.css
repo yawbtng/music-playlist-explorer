@@ -73,6 +73,8 @@ header h1{
     justify-content: center;
     align-items: stretch;
     column-gap: 100px;
+    grid-auto-rows: 450px;
+    grid-auto-flow: columns;
 
 }
 
