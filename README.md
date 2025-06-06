@@ -9,7 +9,7 @@ Submitted by: **NAME**
 
 Estimated time spent: **#** hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://music-playlist-explorer-cqhm.onrender.com/)
 
 ### Application Features
 
