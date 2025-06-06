@@ -1,15 +1,22 @@
 const loadCards = () => {
    console.log("loading playlist cards and playlist modals");
    const playlistCards = document.getElementById("playlist-cards");
-
    for (const list of playlists) {
          const el = createPlaylist(list)
          playlistCards.appendChild(el)
    }
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-   loadCards();
+   const currentPath = window.location.pathname;
+   if (currentPath === "/index.html") {
+      loadCards();
+   } else if (currentPath === "/featured.html") {
+         let featuredPlaylist = loadRandomFeature();
+         createFeaturedPlaylist(featuredPlaylist);
+   }
+   
 })
 
 
@@ -19,7 +26,6 @@ const createPlaylist = (list) => {
       playlistElement.className = "p-card"
 
       let random = Math.floor(Math.random() * 100) + 1;
-
 
       playlistElement.innerHTML = `
                   <img src="${list.playlist_art}">
@@ -82,6 +88,8 @@ const createPlaylist = (list) => {
          }
       })
       return playlistElement;
+
+
 }
 
 const createPlaylistModal = (modal) => {
@@ -127,3 +135,41 @@ const createPlaylistModal = (modal) => {
    modalElement.style.display = "block";
 }
 
+// Featured Page Implementation
+const createFeaturedPlaylist = (playlist) => {
+   const playlistArea = document.querySelector(".playlist-content");
+   let songList = "";
+   
+   playlist.songs.forEach((song) => {
+      songList += `
+      <div class="song">
+         <img src="${song.image}">
+         <div class="song-text">
+               <h4>${song.song_name}</h4>
+               <p>${song.artist}</p>
+               <p>${song.duration}</p>
+         </div>
+      </div>
+      `
+   })
+
+   playlistArea.innerHTML = `
+      <div class="playlist-info">
+         <img id="playlistImage" src="${playlist.playlist_art}" alt="Playlist Image">
+         <div>
+            <h1 id="playlistName">${playlist.playlist_name}</h1>
+            <p id="creatorName">${playlist.playlist_author}</p>
+         </div>
+      </div>
+      <div class="song-container">
+         ${songList}
+      </div>
+   `
+}
+
+const loadRandomFeature = () => {
+   let randomFeature = Math.floor(Math.random() * playlists.length) + 1;
+   let featuredPlaylist = playlists[randomFeature]
+   console.log(featuredPlaylist)
+   return featuredPlaylist;
+}
