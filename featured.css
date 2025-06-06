@@ -58,7 +58,7 @@ header h1{
 
 .playlist-content {
    background-color: #fefefe;
-   margin: 5% auto;
+   margin: 250px auto 10px auto;
    padding: 20px;
    width: 80%; /* Could be more or less, depending on screen size */
    height: 80%;
@@ -86,6 +86,7 @@ header h1{
     margin-bottom: 25px;
     align-items: center;;
     text-align: center;
+    transform: scale(1.5);
 }
 
 #playlistName {
