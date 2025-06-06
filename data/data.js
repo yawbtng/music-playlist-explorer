@@ -9,7 +9,7 @@ playlists = [
     "playlistID": 1,
     "playlist_name": "Summer Vibes",
     "playlist_author": "John Doe",
-    "playlist_art": "assets/img/playlist.png",
+    "playlist_art": "assets/summer.jpg",
     "date_added": new Date(2023, 4, 12),
     "songs": [
       {
@@ -58,7 +58,7 @@ playlists = [
     "playlistID": 2,
     "playlist_name": "Workout Mix",
     "playlist_author": "Jane Smith",
-    "playlist_art": "assets/img/playlist.png",
+    "playlist_art": "assets/lebron.jpg",
     "date_added": new Date(2021, 6, 17),
     "songs": [
       {
@@ -107,7 +107,7 @@ playlists = [
     "playlistID": 3,
     "playlist_name": "Relaxing Music",
     "playlist_author": "Bob Johnson",
-    "playlist_art": "assets/img/playlist.png",
+    "playlist_art": "assets/chill.png",
     "date_added": new Date(2025, 3, 1),
     "songs": [
       {
@@ -156,7 +156,7 @@ playlists = [
     "playlistID": 4,
     "playlist_name": "Jazz Classics",
     "playlist_author": "Emily Chen",
-    "playlist_art": "assets/img/playlist.png",
+    "playlist_art": "assets/jazz.png",
     "date_added": new Date(2023, 8, 3),
     "songs": [
       {
@@ -205,7 +205,7 @@ playlists = [
     "playlistID": 5,
     "playlist_name": "Rock Anthems",
     "playlist_author": "David Lee",
-    "playlist_art": "assets/img/playlist.png",
+    "playlist_art": "assets/rock.jpg",
     "date_added": new Date(2025, 5, 7),
     "songs": [
       {
@@ -254,7 +254,7 @@ playlists = [
     "playlistID": 6,
     "playlist_name": "Hip-Hop Favorites",
     "playlist_author": "Sarah Taylor",
-    "playlist_art": "assets/img/playlist.png",
+    "playlist_art": "assets/hiphop.jpg",
     "date_added": new Date(2020, 10, 12),
     "songs": [
       {
@@ -303,7 +303,7 @@ playlists = [
     "playlistID": 7,
     "playlist_name": "Pop Hits",
     "playlist_author": "Emily Chen",
-    "playlist_art": "assets/img/playlist.png",
+    "playlist_art": "assets/pop.jpg",
     "date_added": new Date(2024, 7, 1),
     "songs": [
       {
@@ -352,7 +352,7 @@ playlists = [
     "playlistID": 8,
     "playlist_name": "Electronic Dance Music",
     "playlist_author": "David Lee",
-    "playlist_art": "assets/img/playlist.png",
+    "playlist_art": "./assets/usher.jpg",
     "date_added": new Date(2019, 11, 15),
     "songs": [
       {

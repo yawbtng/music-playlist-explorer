@@ -1,7 +1,8 @@
 header {
     border-bottom: 3px solid #c2c2c2;
-    background-color: #eeeeee;
+    background-color: black;
     margin-top: 0px;
+    padding-top:5px;
     height: 10%;
     display: block;
     flex-direction: column;
@@ -18,8 +19,12 @@ header img {
     height: 5em;
 }
 
+body {
+    background-color: black;
+}
+
 header h1{
-    color: #595959;
+    color: white;
     margin: 0px 10px 0px 30px;
     padding: 0px 10px ;
     font-size: 60px;
@@ -40,7 +45,7 @@ header h1{
     list-style: none;
     margin: 0 50px;
     padding: 10px;
-    border: 3px solid black;
+    border-bottom: 3px solid black;
 
 }
 
@@ -57,7 +62,7 @@ header h1{
 
 
 .playlist-content {
-   background-color: #fefefe;
+   background-color: blakc;
    margin: 250px auto 10px auto;
    padding: 20px;
    width: 80%; /* Could be more or less, depending on screen size */
@@ -92,6 +97,7 @@ header h1{
 #playlistName {
     font-size: 40px;
     margin: 0px auto;
+    color: white;
 
 }
 #creatorName {
@@ -107,6 +113,7 @@ header h1{
 
 .song-container {
     overflow: auto;
+    transform: scale(1.2);
 }
 
 .song {
@@ -115,7 +122,11 @@ header h1{
     justify-content:flex-start;
     gap: 15px;
     margin: 20px 0px;
-    border: 2px solid black;
+    border: 2px solid white;
+}
+
+.song:hover {
+    transform: translateY(5px);
 }
 
 .song img {
@@ -124,21 +135,8 @@ header h1{
 
 .song-text h4, p {
     margin: 2px;
+    color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 footer {

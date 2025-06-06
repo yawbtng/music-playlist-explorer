@@ -244,17 +244,18 @@ const sorting = () => {
 const search = () => {
    const submitSearch = document.getElementById("search-form");
    const elementsContainer = document.getElementById("playlist-cards");
+   const clearSearch = document.getElementById("clear-search");
+   const searchInput = document.getElementById("search-input");
 
    function displaySearchElements() {
-      const searchInput = document.getElementById("search-input");
+      
       let searchValue = searchInput.value.toLowerCase();
       const elements = Array.from(elementsContainer.children);
       
       elements.forEach((element) => {
          const playlistName = element.querySelector(".playlist-title").textContent.toLowerCase();
-         console.log(playlistName);
          const playlistAuthor = element.querySelector(".playlist-author").textContent.toLowerCase();
-         console.log(playlistAuthor);
+
 
          if (playlistName.includes(searchValue) || playlistAuthor.includes(searchValue)) {
             element.style.display = "block";
@@ -270,9 +271,12 @@ const search = () => {
    }
 
    submitSearch.addEventListener("submit", (event) => {
-      console.log(event)
       event.preventDefault();
       displaySearchElements();
    });
+
+   clearSearch.addEventListener("click", () => {
+      searchInput.value = "";
+   })
 }
 

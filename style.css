@@ -1,18 +1,22 @@
-
 header {
     border-bottom: 3px solid #c2c2c2;
-    background-color: #eeeeee;
-    margin-top: 0px;
+    background-color: black;
+    margin-top: -5px;
     height: 10%;
     display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+
+    padding-top: 10px;
+
 }
 
 .headline{
     display:flex;
     justify-content: center;
+    
 }
 
 header img {
@@ -20,8 +24,8 @@ header img {
 }
 
 header h1{
-    color: #595959;
-    margin: 0px 10px 0px 30px;
+    color: white;
+    margin: 10px 10px 10px 30px;
     padding: 0px 10px ;
     font-size: 60px;
     text-align: center;
@@ -41,7 +45,7 @@ header h1{
     list-style: none;
     margin: 0 50px;
     padding: 10px;
-    border: 3px solid black;
+    border-bottom: 3px solid black;
 
 }
 
@@ -62,7 +66,7 @@ header h1{
     justify-content: center;
     align-items: center;
     column-gap: 100px;
-    transform: scale(1.2);
+    transform: scale(2);
 }
 
 #playlist-cards {
@@ -74,7 +78,7 @@ header h1{
     align-items: stretch;
     column-gap: 100px;
     grid-auto-rows: 450px;
-    grid-auto-flow: columns;
+    grid-auto-flow: column;
 
 }
 
@@ -85,6 +89,8 @@ header h1{
     border-radius: 5%;
     padding: 5px;
     font-weight: 400;
+    min-height: 360px;
+    background-color: white;
 }
 
 .p-card img{
@@ -141,12 +147,13 @@ header h1{
     background-color: lightskyblue;
     cursor:grab;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
 }
 
 body {
     font-family: 'Arial', sans-serif;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: black;
 }
 
 footer {
@@ -182,7 +189,7 @@ footer {
    margin: 5% auto; /* 15% from the top and centered */
    padding: 20px;
    border: 1px solid #888;
-   width: 80%; /* Could be more or less, depending on screen size */
+   width: 60%; /* Could be more or less, depending on screen size */
    
 }
 .close {
@@ -240,6 +247,11 @@ footer {
 .song-content img {
     height: 110px;
     margin-right: 10px;
+}
+
+.song:hover {
+    background-color: #c2c2c2;
+    transform: translateY(5px);
 }
 
 .song-content {
