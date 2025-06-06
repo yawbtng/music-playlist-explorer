@@ -110,6 +110,22 @@ header h1{
     color: black;
 }
 
+.like-and-delete {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.delete-playlist {
+    border-radius: 20%;
+    font-size: 20px;
+    cursor:grab;
+}
+
+.delete-playlist:hover {
+    background-color: red;
+}
+
 .p-card:hover {
     background-color: lightskyblue;
     cursor:grab;

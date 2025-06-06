@@ -9,7 +9,7 @@ playlists = [
     "playlistID": 1,
     "playlist_name": "Summer Vibes",
     "playlist_author": "John Doe",
-    "playlist_art": getRandomImageUrl(),
+    "playlist_art": "assets/img/playlist.png",
     "songs": [
       {
         "songID": 1,
@@ -57,7 +57,7 @@ playlists = [
     "playlistID": 2,
     "playlist_name": "Workout Mix",
     "playlist_author": "Jane Smith",
-    "playlist_art": getRandomImageUrl(),
+    "playlist_art": "assets/img/playlist.png",
     "songs": [
       {
         "songID": 4,
@@ -105,7 +105,7 @@ playlists = [
     "playlistID": 3,
     "playlist_name": "Relaxing Music",
     "playlist_author": "Bob Johnson",
-    "playlist_art": getRandomImageUrl(),
+    "playlist_art": "assets/img/playlist.png",
     "songs": [
       {
         "songID": 7,
@@ -153,7 +153,7 @@ playlists = [
     "playlistID": 4,
     "playlist_name": "Jazz Classics",
     "playlist_author": "Emily Chen",
-    "playlist_art": getRandomImageUrl(),
+    "playlist_art": "assets/img/playlist.png",
     "songs": [
       {
         "songID": 10,
@@ -201,7 +201,7 @@ playlists = [
     "playlistID": 5,
     "playlist_name": "Rock Anthems",
     "playlist_author": "David Lee",
-    "playlist_art": getRandomImageUrl(),
+    "playlist_art": "assets/img/playlist.png",
     "songs": [
       {
         "songID": 13,
@@ -249,7 +249,7 @@ playlists = [
     "playlistID": 6,
     "playlist_name": "Hip-Hop Favorites",
     "playlist_author": "Sarah Taylor",
-    "playlist_art": getRandomImageUrl(),
+    "playlist_art": "assets/img/playlist.png",
     "songs": [
       {
         "songID": 16,
@@ -297,7 +297,7 @@ playlists = [
     "playlistID": 7,
     "playlist_name": "Pop Hits",
     "playlist_author": "Emily Chen",
-    "playlist_art": getRandomImageUrl(),
+    "playlist_art": "assets/img/playlist.png",
     "songs": [
       {
         "songID": 19,
@@ -345,7 +345,7 @@ playlists = [
     "playlistID": 8,
     "playlist_name": "Electronic Dance Music",
     "playlist_author": "David Lee",
-    "playlist_art": getRandomImageUrl(),
+    "playlist_art": "assets/img/playlist.png",
     "songs": [
       {
         "songID": 22,

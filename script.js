@@ -31,9 +31,11 @@ const createPlaylist = (list) => {
                   <img src="${list.playlist_art}">
                   <h4 class="playlist-title">${list.playlist_name}</h4>
                   <h6 class="playlist-author">${list.playlist_author}</h6>
-                  <div class="like-feature">
+                  <div class="like-and-delete">
                      <button class="playlist-like" id="playlist-like-${list.playlistID}">♡<span class="like-count" id="like-count-${list.playlistID}">${random}</span></button>
+                     <button class="delete-playlist" id="delete-playlist-${list.playlistID}">Delete</button>
                   </div>
+                  
                `
 
       playlistElement.addEventListener("click", (event) => {
@@ -59,6 +61,17 @@ const createPlaylist = (list) => {
                like.style.color = "black";
             }
             
+         } else if (event.target.classList.contains("delete-playlist")) {
+            const deleteBtn = document.getElementById(`delete-playlist-${list.playlistID}`);
+
+            deleteBtn.addEventListener("click", () => {
+               playlistElement.innerHTML = "";
+               playlistElement.style.border = "none";
+               playlistElement.style.display = "none";
+
+            })
+
+
          } else {
             createPlaylistModal(list);
 
@@ -88,8 +101,6 @@ const createPlaylist = (list) => {
          }
       })
       return playlistElement;
-
-
 }
 
 const createPlaylistModal = (modal) => {
