@@ -5,9 +5,9 @@ Meta U Project 1
 
 ## Unit Assignment: Music Playlist Explorer
 
-Submitted by: **NAME**
+Submitted by: **Yaw Boateng**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **25** hours spent in total
 
 Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://music-playlist-explorer-cqhm.onrender.com/)
 
@@ -142,7 +142,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
       <p>Free screen recorder for Mac and PC | Loom - 6 June 2025 - Watch Video</p>
     </a>
     <a href="https://www.loom.com/share/6e71aad0a9ae434384f4cb7347248e28">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/6e71aad0a9ae434384f4cb7347248e28-fff28134c276776f-full-play.gif">
+      <img style="max-width:500px;" src="https://cdn.loom.com/sessions/thumbnails/6e71aad0a9ae434384f4cb7347248e28-fff28134c276776f-full-play.gif">
     </a>
 </div>
 
