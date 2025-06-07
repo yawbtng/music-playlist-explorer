@@ -30,7 +30,7 @@ const createPlaylist = (list) => {
       playlistElement.className = "p-card"
       playlistElement.id = `${list.date_added}`
 
-      let random = Math.floor(Math.random() * 100) + 1;
+      let random = Math.floor(Math.random() * 20);
       playlistElement.innerHTML = `
                   <img src="${list.playlist_art}">
                   <h4 class="playlist-title">${list.playlist_name}</h4>
@@ -274,6 +274,13 @@ const search = () => {
       event.preventDefault();
       displaySearchElements();
    });
+
+   submitSearch.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+         event.preventDefault();
+         displaySearchElements();
+      }
+   })
 
    clearSearch.addEventListener("click", () => {
       searchInput.value = "";
