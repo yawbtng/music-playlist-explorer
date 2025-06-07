@@ -60,7 +60,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 - [X] **Shuffle Songs**
   - [X] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist's detail modal.
   - [X] When the shuffle button is clicked, the playlist's songs should display in a different order.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once. 
+  - [X] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please show yourself shuffling the same playlist more than once. 
   
 - [X] **Featured Page**
   - [X] Application includes a dedicated page that randomly selects and displays a playlist, showing the playlist’s:
